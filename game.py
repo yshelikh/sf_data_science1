@@ -1,12 +1,15 @@
 import numpy as np
-import numpy as np
-def random_predict(number:int=1) -> int:
-    """_summary_
 
-    Args:
-        number (int, optional): _description_. Defaults to 1.
+number = np.random.randint(1,101) #загадываем число
 
-    Returns:
-        int: _description_
-    """    ''''''
-    
+count = 0
+while True:
+    count += 1
+    predict_number = int(input("Угадай число от 1 до 100 "))
+    if predict_number > number:
+        print("Число должно быть меньше!")
+    elif predict_number < number:
+        print("Число должно быть больше!")
+    else:
+        print(f"Вы угадали число! Это число = {number} за {count} попыток")
+        break
